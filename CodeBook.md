@@ -35,18 +35,34 @@ The following files are available for the train and test data. Their description
 
 # Transformation Details
 
-1. Merges the training and the test sets to create one data set.
-2. Extracts only the measurements on the mean and standard deviation for each measurement.
-3. Uses descriptive activity names to name the activities in the data set
-4. Appropriately labels the data set with descriptive activity names.
-5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+1. Merged the training and the test sets to create one data set.
+2. Extracted only the measurements on the mean and standard deviation for each measurement.
+3. Used descriptive activity names to name the activities in the data set
+4. Appropriately labeled the data set with descriptive activity names.
+5. Created a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 # About run_analysis.R
 
-* Require 'plyr', 'dplyr' and data.table librareis.
+* Require 'plyr', 'dplyr' and 'data.table' librareis.
 * Load both test and train data.
 * Load the features and activity labels.
-* Extract the mean and standard deviation column names and data.
-* Process the data. There are two parts processing test and train data respectively.
-* Merge data set.
+* Merge the train and test datasets.
+* Extract only the mean and standard deviation related columns of data.
+* Lable the variable names to become more cogonizable.
+
+
+# Identifiers
+* Subject: The ID of the test subject
+
+* Activity:  The type of activity performed when the corresponding measurements were taken
+1. WALKING: subject was walking during the test
+2. WALKING_UPSTAIRS: subject was walking up a staircase during the test
+3. WALKING_DOWNSTAIRS: subject was walking down a staircase during the test
+4. SITTING: subject was sitting during the test
+5. STANDING: subject was standing during the test
+6. LAYING: subject was laying down during the test
+
+# Measurements
+The rest of variables are the related measurements of sensor signals (accelerometer and gyroscope) on the mean and standard deviation.
+
 
